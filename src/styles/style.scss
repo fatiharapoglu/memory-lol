@@ -20,6 +20,7 @@
     --font-1: "Spiegel";
     --font-2: "Beaufort";
     --font-3: "Marcellus SC", serif;
+    --name-bg: rgba(0, 0, 0, 0.65);
 }
 
 * {
@@ -60,6 +61,7 @@ body {
         font-size: 1.75rem;
         font-family: var(--font-3);
         letter-spacing: 2px;
+        text-shadow: 1px 1px #1f1f1f;
 
         img {
             width: 75px;
@@ -93,14 +95,37 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 50px;
+    row-gap: 10px;
     padding: 25px 60px;
 
     .main-card {
-        width: 15vw;
-        min-width: 125px;
-        aspect-ratio: 1;
+        width: clamp(125px, 15vw, 275px);
         border: 1px dashed var(--third);
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            object-position: top;
+            width: 100%;
+        }
+
+        .champ-name {
+            position: absolute;
+            background-color: var(--name-bg);
+            color: var(--secondary);
+            letter-spacing: 1px;
+            width: 100%;
+            text-align: center;
+            padding: 5px;
+            bottom: 0;
+        }
+
+        .champ-name::first-letter {
+            text-transform: uppercase;
+        }
     }
 }
 
