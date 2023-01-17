@@ -1,0 +1,9 @@
+{
+    "extends": ["react-app", "react-app/jest", "prettier"],
+    "rules": {
+        "no-console": "off",
+        "indent": ["error", 4],
+        "prefer-destructuring": "off",
+        "no-plusplus": "off"
+    }
+}
