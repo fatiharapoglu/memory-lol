@@ -138,7 +138,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 280px;
+    width: 300px;
     height: 180px;
     justify-content: center;
     align-items: center;
@@ -211,4 +211,8 @@ body {
     a:hover {
         color: var(--secondary);
     }
+}
+
+.disabled {
+    pointer-events: none;
 }

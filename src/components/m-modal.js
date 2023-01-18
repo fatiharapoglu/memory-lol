@@ -6,7 +6,7 @@ const Modal = (props) => {
         <div className="modal">
             <div className="modal-content">
                 <div>You have slained {props.score} enemies.</div>
-                <button>Play Again?</button>
+                <button onClick={props.playAgain}>Play Again?</button>
             </div>
             <video className="poro" autoPlay muted loop>
                 <source src={poro} type="video/mp4" />

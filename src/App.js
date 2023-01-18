@@ -10,11 +10,7 @@ const App = () => {
     const [clickedChamps, setClickedChamps] = useState([]);
     const [isGameOver, setIsGameOver] = useState(false);
 
-    const handleScore = () => {
-        setScore(score + 1);
-    };
-
-    const handleHighScore = () => {
+    const checkHighScore = () => {
         if (score > highScore) {
             setHighScore(score);
         }
@@ -23,15 +19,28 @@ const App = () => {
     const handleClickedChamps = (newChamp) => {
         if (clickedChamps.includes(newChamp)) {
             setIsGameOver(true);
+            checkHighScore();
+        } else {
+            setClickedChamps([...clickedChamps, newChamp]);
+            setScore(score + 1);
         }
-        setClickedChamps([...clickedChamps, newChamp]);
+    };
+
+    const playAgain = () => {
+        setScore(0);
+        setIsGameOver(false);
+        setClickedChamps([]);
     };
 
     return (
         <>
             <Header score={score} highScore={highScore} />
-            <Main clickedChamps={clickedChamps} handleClickedChamps={handleClickedChamps} />
-            {isGameOver && <Modal score={score} />}
+            <Main
+                clickedChamps={clickedChamps}
+                handleClickedChamps={handleClickedChamps}
+                isGameOver={isGameOver}
+            />
+            {isGameOver && <Modal score={score} playAgain={playAgain} />}
             <Footer />
         </>
     );

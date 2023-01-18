@@ -22,14 +22,13 @@ const Main = (props) => {
     };
 
     const test = (e) => {
-        console.log(e.target.id);
         props.handleClickedChamps(e.target.id);
     };
 
     const images = getRandomImages();
 
     return (
-        <div className="main">
+        <div className={props.isGameOver ? "main disabled" : "main"}>
             <div className="main-card" onClick={test}>
                 {champions[images[0]]}
                 <span className="champ-name">{champions[images[0]].props.id}</span>
