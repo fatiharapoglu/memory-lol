@@ -1,7 +1,7 @@
 import React from "react";
 import icon from "../assets/LoL-icon.png";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className="header">
             <div className="header-left">
@@ -12,10 +12,10 @@ const Header = () => {
             </div>
             <div className="header-right">
                 <span>
-                    Score: <span id="score">1</span>
+                    Score: <span id="score"> {props.score} </span>
                 </span>
                 <span>
-                    High Score: <span id="high-score">2</span>
+                    High Score: <span id="high-score"> {props.highScore} </span>
                 </span>
             </div>
         </header>

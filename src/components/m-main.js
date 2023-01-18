@@ -1,7 +1,7 @@
 import React from "react";
 import champions from "./c-champions";
 
-const Main = () => {
+const Main = (props) => {
     const numbers = [];
     const getRandomNumber = () => {
         const random = Math.floor(Math.random() * 30);
@@ -20,6 +20,15 @@ const Main = () => {
     };
 
     const images = getRandomImages();
+
+    const cards = document.querySelectorAll(".main-card");
+    cards.forEach((card) =>
+        card.addEventListener("click", (e) => {
+            const ID = e.target.id;
+            props.handleClickedChamps(ID);
+            console.log(ID);
+        })
+    );
 
     return (
         <div className="main">
