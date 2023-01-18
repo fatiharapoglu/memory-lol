@@ -6,20 +6,14 @@
     src: url("../assets/fonts/BeaufortforLOL-Regular.ttf");
 }
 
-@font-face {
-    font-family: "Spiegel";
-    src: url("../assets/fonts/Spiegel_TT_Regular.ttf");
-}
-
 :root {
     --background-primary: #0a1427;
     --background-secondary: #091124;
     --primary: #f0e6d2;
     --secondary: #c8aa6e;
     --third: #005a82;
-    --font-1: "Spiegel";
-    --font-2: "Beaufort";
-    --font-3: "Marcellus SC", serif;
+    --font-1: "Beaufort";
+    --font-2: "Marcellus SC", serif;
     --name-bg: rgba(0, 0, 0, 0.65);
 }
 
@@ -44,7 +38,7 @@ body {
     min-width: 500px;
     background-color: var(--background-primary);
     color: var(--primary);
-    font-family: var(--font-2);
+    font-family: var(--font-1);
 }
 
 .header {
@@ -59,12 +53,44 @@ body {
         align-items: center;
         gap: 25px;
         font-size: 1.75rem;
-        font-family: var(--font-3);
+        font-family: var(--font-2);
         letter-spacing: 2px;
         text-shadow: 1px 1px #1f1f1f;
 
         img {
             width: 75px;
+        }
+    }
+
+    .header-middle {
+        position: relative;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 0.75rem;
+        cursor: pointer;
+        text-align: center;
+        color: var(--secondary);
+
+        .how-to-play {
+            visibility: hidden;
+            position: absolute;
+            width: 250px;
+            bottom: -75px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--name-bg);
+            color: #fff;
+            text-align: center;
+            font-weight: normal;
+            padding: 5px;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+    }
+
+    .header-middle:hover {
+        .how-to-play {
+            visibility: visible;
         }
     }
 
@@ -79,6 +105,11 @@ body {
             padding-left: 10px;
             font-weight: bold;
             color: var(--secondary);
+        }
+
+        span {
+            display: flex;
+            align-items: center;
         }
     }
 }

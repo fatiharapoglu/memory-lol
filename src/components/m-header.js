@@ -10,6 +10,12 @@ const Header = (props) => {
                 </div>
                 <div>The Memory League</div>
             </div>
+            <div className="header-middle">
+                HOW TO PLAY?{" "}
+                <span className="how-to-play">
+                    Your goal is to avoid clicking the same champion twice. Max score is 30!
+                </span>
+            </div>
             <div className="header-right">
                 <span>
                     Score: <span id="score"> {props.score} </span>

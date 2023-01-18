@@ -29,7 +29,6 @@ const Main = (props) => {
             }
             const clickedChamps = props.clickedChamps;
             if (clickedChamps.length === 30) return true;
-            console.log(clickedChamps);
             let diff = selectedChamps.some((x) => !clickedChamps.includes(x));
             return diff;
         };
@@ -37,7 +36,7 @@ const Main = (props) => {
         if (checkDifferences() === false) {
             return display10();
         } else {
-            const html = (
+            const renderJSX = (
                 <div className={props.isGameOver ? "main disabled" : "main"}>
                     <div className="main-card" onClick={handleClicks}>
                         {champions[images[0]]}
@@ -81,7 +80,7 @@ const Main = (props) => {
                     </div>
                 </div>
             );
-            return html;
+            return renderJSX;
         }
     };
 
