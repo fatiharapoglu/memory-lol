@@ -8,13 +8,13 @@
 
 :root {
     --background-primary: #0a1427;
-    --background-secondary: #091124;
-    --primary: #f0e6d2;
-    --secondary: #c8aa6e;
-    --third: #005a82;
+    --background-secondary: #020a13;
+    --primary: #ffefcf;
+    --secondary: #dcb262;
+    --third: #cde7ff;
     --font-1: "Beaufort";
     --font-2: "Marcellus SC", serif;
-    --name-bg: rgba(0, 0, 0, 0.65);
+    --name-bg: #000000b3;
 }
 
 * {
@@ -37,6 +37,7 @@ body {
     min-height: 100vh;
     min-width: 500px;
     background-color: var(--background-primary);
+    background-image: linear-gradient(#000b16, #0a1427, #000b16);
     color: var(--primary);
     font-family: var(--font-1);
 }
@@ -126,7 +127,7 @@ body {
 
     .main-card {
         width: clamp(125px, 15vw, 275px);
-        border: 1px dashed var(--third);
+        border: 1px solid black;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -148,6 +149,7 @@ body {
             text-align: center;
             padding: 5px;
             bottom: 0;
+            border-top: 1px solid black;
         }
 
         .champ-name::first-letter {
@@ -162,7 +164,7 @@ body {
 
 .modal {
     position: absolute;
-    border: 1px dashed var(--third);
+    border: 1px solid black;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
