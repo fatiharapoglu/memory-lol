@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/m-header";
 import Footer from "./components/m-footer";
 import Main from "./components/m-main";
 import Modal from "./components/m-modal";
-import trueSound from "./assets/true.wav";
-import falseSound from "./assets/false.wav";
+import trueSound from "./assets/media/true.wav";
+import falseSound from "./assets/media/false.wav";
 
 const App = () => {
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
     const [clickedChamps, setClickedChamps] = useState([]);
     const [isGameOver, setIsGameOver] = useState(false);
+
+    useEffect(() => {
+        if (score === 30) {
+            setIsGameOver(true);
+            setHighScore(30);
+        }
+    }, [score]);
 
     const checkHighScore = () => {
         if (score > highScore) {
