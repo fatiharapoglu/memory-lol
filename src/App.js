@@ -3,6 +3,8 @@ import Header from "./components/m-header";
 import Footer from "./components/m-footer";
 import Main from "./components/m-main";
 import Modal from "./components/m-modal";
+import trueSound from "./assets/true.wav";
+import falseSound from "./assets/false.wav";
 
 const App = () => {
     const [score, setScore] = useState(0);
@@ -20,9 +22,11 @@ const App = () => {
         if (clickedChamps.includes(newChamp)) {
             setIsGameOver(true);
             checkHighScore();
+            new Audio(falseSound).play();
         } else {
             setClickedChamps([...clickedChamps, newChamp]);
             setScore(score + 1);
+            new Audio(trueSound).play();
         }
     };
 
