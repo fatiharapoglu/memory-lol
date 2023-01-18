@@ -129,6 +129,56 @@ body {
     }
 }
 
+.modal {
+    position: absolute;
+    border: 1px dashed var(--third);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+
+    .poro {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .modal-content {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+
+        div {
+            padding: 30px 0px;
+            font-size: 1.25rem;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        button {
+            border: none;
+            font-weight: bold;
+            color: var(--third);
+            background-color: inherit;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 1.3rem;
+            text-shadow: 1px 1px black;
+        }
+
+        button:hover {
+            color: var(--secondary);
+        }
+    }
+}
+
 .footer {
     position: relative;
     display: flex;
@@ -152,6 +202,10 @@ body {
 
     .github-icon:hover {
         transform: rotate(360deg);
+    }
+
+    a {
+        color: var(--third);
     }
 
     a:hover {
