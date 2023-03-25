@@ -1,4 +1,3 @@
-import React from "react";
 import poro from "../assets/media/poro.mp4";
 
 const Modal = (props) => {

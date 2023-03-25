@@ -1,5 +1,4 @@
-import React from "react";
-import champions from "./c-champions";
+import champions from "./Champions";
 
 const Main = (props) => {
     const display10 = () => {

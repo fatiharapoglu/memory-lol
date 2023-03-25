@@ -1,18 +1,12 @@
 {
     "name": "memory-lol",
-    "version": "0.1.0",
+    "version": "1.0.0",
+    "keywords": [],
+    "author": "Fatih Arapoğlu",
+    "description": "memory game",
+    "license": "MIT",
     "homepage": "https://fatiharapoglu.github.io/memory-lol",
     "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^5.16.5",
-        "@testing-library/react": "^13.4.0",
-        "@testing-library/user-event": "^13.5.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-scripts": "5.0.1",
-        "sass": "^1.57.1",
-        "web-vitals": "^2.1.4"
-    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
@@ -20,13 +14,6 @@
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest",
-            "prettier"
-        ]
     },
     "browserslist": {
         "production": [
@@ -40,9 +27,23 @@
             "last 1 safari version"
         ]
     },
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
     "devDependencies": {
+        "eslint": "^8.36.0",
+        "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
         "gh-pages": "^4.0.0",
-        "prettier": "2.8.3"
+        "prettier": "2.8.3",
+        "sass": "^1.60.0"
     }
 }

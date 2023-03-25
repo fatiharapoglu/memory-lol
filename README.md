@@ -1,9 +1,34 @@
-# The Memory League (React Memory Game)
+# The Memory League
 
-[The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-memory-card)'s node path React memory game project.
+A React memory game of [League of Legends](https://leagueoflegends.com/). The goal of the game is to avoid clicking the same champion twice.
 
-Created with React.
+Created with **React**.
 
-[Click for live preview](https://fatiharapoglu.github.io/memory-lol)
+⮕ [Live preview](https://fatiharapoglu.github.io/memory-lol/)
 
-![RPS](src/assets/readme.png)
+## Features
+
+-   At least one new image after re-render, for player to not fail unfairly.
+-   30 different champions, therefore max score of 30.
+-   Sound feedback if you fail or success for every champion click.
+-   Best score is saved so you can compare your score every try.
+-   Responsive design.
+
+## Helper Dependencies
+
+-   [Sass](https://sass-lang.com/) for SCSS
+-   [Eslint](https://eslint.org/) for linting
+-   [Prettier](https://prettier.io/) for formatting
+
+## Roadmap
+
+-   Add mute button for sound effects.
+
+## Acknowledgements
+
+-   [Riot Games](https://brand.riotgames.com/en-us/league-of-legends/fundamentals) (characters and fonts)
+-   [@shinephoenixstormcrow](https://freesound.org/people/shinephoenixstormcrow/) (success & fail sound effects)
+
+## How It Looks
+
+![ss](./src/assets/readme.png)

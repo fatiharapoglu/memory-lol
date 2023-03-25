@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Header from "./components/m-header";
-import Footer from "./components/m-footer";
-import Main from "./components/m-main";
-import Modal from "./components/m-modal";
+import { useEffect, useState } from "react";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import Modal from "./components/Modal";
 import trueSound from "./assets/media/true.wav";
 import falseSound from "./assets/media/false.wav";
 

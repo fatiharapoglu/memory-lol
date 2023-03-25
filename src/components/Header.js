@@ -1,4 +1,3 @@
-import React from "react";
 import icon from "../assets/LoL-icon.png";
 
 const Header = (props) => {
