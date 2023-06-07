@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/memory-lol/static/css/main.8796eabd.css",
-    "main.js": "/memory-lol/static/js/main.c840eca4.js",
+    "main.css": "/memory-lol/static/css/main.471d2e70.css",
+    "main.js": "/memory-lol/static/js/main.d48e56f5.js",
     "static/media/poro.mp4": "/memory-lol/static/media/poro.1945d84ba4086cb2e9b9.mp4",
     "static/media/true.wav": "/memory-lol/static/media/true.f1f96272b3b6267e3c5f.wav",
     "static/media/BeaufortforLOL-Regular.ttf": "/memory-lol/static/media/BeaufortforLOL-Regular.9b1b785d69b4b4febde0.ttf",
@@ -38,11 +38,11 @@
     "static/media/tahmKench.jpg": "/memory-lol/static/media/tahmKench.ff40373675c6e600460f.jpg",
     "static/media/kayn.jpg": "/memory-lol/static/media/kayn.214e7bfcf33f2fcbe9b1.jpg",
     "index.html": "/memory-lol/index.html",
-    "main.8796eabd.css.map": "/memory-lol/static/css/main.8796eabd.css.map",
-    "main.c840eca4.js.map": "/memory-lol/static/js/main.c840eca4.js.map"
+    "main.471d2e70.css.map": "/memory-lol/static/css/main.471d2e70.css.map",
+    "main.d48e56f5.js.map": "/memory-lol/static/js/main.d48e56f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.8796eabd.css",
-    "static/js/main.c840eca4.js"
+    "static/css/main.471d2e70.css",
+    "static/js/main.d48e56f5.js"
   ]
 }
