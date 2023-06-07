@@ -35,7 +35,6 @@ a {
 
 body {
     min-height: 100vh;
-    min-width: 500px;
     background-color: var(--background-primary);
     background-image: linear-gradient(#000b16, #0a1427, #000b16);
     color: var(--primary);
@@ -48,6 +47,7 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: var(--background-secondary);
+    white-space: nowrap;
 
     .header-left {
         display: flex;
@@ -86,6 +86,7 @@ body {
             padding: 5px;
             border-radius: 6px;
             font-size: 1rem;
+            white-space: break-spaces;
         }
     }
 
@@ -117,7 +118,8 @@ body {
 
 .main {
     min-height: 77.5vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -248,4 +250,53 @@ body {
 
 .disabled {
     pointer-events: none;
+}
+
+@media (width <= 1000px) {
+    .header {
+        height: 75px;
+
+        .header-left {
+            font-size: 1rem;
+            gap: 0.5rem;
+            letter-spacing: normal;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        .header-right {
+            gap: 1rem;
+        }
+
+        .header-middle {
+            padding: 1rem;
+        }
+    }
+
+    .main {
+        padding: 2rem;
+        gap: 10px;
+        display: flex;
+    }
+}
+
+@media (width <= 700px) {
+    .header {
+        .header-left {
+            img {
+                display: none;
+            }
+        }
+
+        .header-right {
+            font-size: 0.75rem;
+
+            #score,
+            #high-score {
+                font-size: 1rem;
+            }
+        }
+    }
 }
